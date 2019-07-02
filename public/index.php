@@ -2,6 +2,9 @@
 
 require '../vendor/autoload.php';
 
-$app = \Spencer\Application::instance();
+use \Spencer\Application;
+use \Spencer\BootLoader;
 
-$request = $app->make(\Spencer\Request::class);
+$app = Application::instance();
+
+BootLoader::bootstrap();
